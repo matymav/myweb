@@ -3,11 +3,11 @@ kind: Service
 metadata:
  name: myweb-svc
  labels:
- app: myweb
+   app: myweb
 spec:
  type: NodePort
  ports:
  - port: 80
  nodePort: 30080
  selector:
- app: myweb
+   app.kubernetes.io/name: myweb

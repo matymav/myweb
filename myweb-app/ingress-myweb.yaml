@@ -17,4 +17,4 @@ spec:
           service:
             name: myweb-svc
             port:
-              name: http
+              name: https

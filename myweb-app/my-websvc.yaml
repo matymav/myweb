@@ -6,12 +6,14 @@ metadata:
     app: myweb
 spec:
   ports:
-  - port: 80
+  - name: http
     protocol: TCP
+    port: 80
     targetPort: 8085
-  - port: 443
+  - name: https
+    port: 443
     protocol: TCP
     targetPort: 8443
- type: LoadBalancer
   selector:
     app: myweb
+

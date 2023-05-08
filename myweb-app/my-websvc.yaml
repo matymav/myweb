@@ -5,6 +5,8 @@ metadata:
   labels:
     app: myweb
 spec:
+  externalIPs:
+  - 192.168.0.21
   ports:
   - name: http
     protocol: TCP

@@ -8,6 +8,9 @@ spec:
   ports:
   - port: 80
     protocol: TCP
-    targetPort: 80
+    targetPort: 8085
+  - port: 443
+    protocol: TCP
+    targetPort: 8443
   selector:
     app: myweb

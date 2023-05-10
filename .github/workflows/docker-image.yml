@@ -16,4 +16,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag mavweb:$(date +%s) --build-arg COMMIT=$IMAGE_TAG
+      run: docker build . --file Dockerfile --tag mavweb:$(date +%s) --build-arg COMMIT=${{ github.sha }}

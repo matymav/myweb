@@ -2,6 +2,8 @@ name: ci
 
 on:
   push:
+    paths-ignore:
+      - 'myweb-app'
     branches:
       - 'main'
 
@@ -27,4 +29,4 @@ jobs:
         with:
           context: https://github.com/matymav/myweb.git#main
           push: true
-          tags: matymav/matyweb:latest
+          tags: matymav/matyweb:${{ github.ref }}

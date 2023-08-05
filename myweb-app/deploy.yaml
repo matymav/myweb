@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: myweb
-        image: matymav/matyweb:latest
+        image: matymav/matyweb:pija1
         imagePullPolicy: Always
         ports:
         - containerPort: 80

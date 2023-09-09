@@ -1,6 +1,11 @@
 name: Edit Files
 
-on: push
+on:
+  push:
+    paths-ignore:
+      - 'myweb-app'
+    branches:
+      - 'main'
 
 env:
   git_hash: ${{ github.sha }} 

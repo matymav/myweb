@@ -31,3 +31,12 @@ jobs:
           context: https://github.com/matymav/myweb.git#main
           push: true
           tags: matymav/matyweb:${{ env.git_hash }}
+      
+      - name: Edit Files
+        uses: TaiStudio/action-edit-YML@main
+        with:
+          type: 'single'
+          files: "./myweb-app/deploy.yaml"
+          elementSTR: "['spec'][0]['template'][0]['spec'][0]['containers'][0]['image']"
+          replace: "matymav/matyweb:latest"
+          replaceFor: "matymav/matyweb:${{ env.git_hash }}"

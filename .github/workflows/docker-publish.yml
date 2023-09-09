@@ -38,5 +38,5 @@ jobs:
           mode: IMAGE_TAG
           container-name: myweb
           new-image-tag: ${{ env.git_hash }}
-          dir: myweb/myweb-app/
-          files: deploy.yaml
+          dir: myweb
+          files: myweb-app/deploy.yaml

@@ -6,7 +6,8 @@ on:
       - 'myweb-app'
     branches:
       - 'main'
-
+env:
+  git_hash: $(git rev-parse --short "$GITHUB_SHA")      
 jobs:
   docker:
     runs-on: ubuntu-latest
@@ -29,4 +30,4 @@ jobs:
         with:
           context: https://github.com/matymav/myweb.git#main
           push: true
-          tags: matymav/matyweb:pija1
+          tags: matymav/matyweb:{$git_hash}

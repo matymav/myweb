@@ -38,5 +38,4 @@ jobs:
           mode: IMAGE_TAG
           container-name: myweb
           new-image-tag: ${{ env.git_hash }}
-          dir: matymav/
           files: myweb-app/deploy.yaml

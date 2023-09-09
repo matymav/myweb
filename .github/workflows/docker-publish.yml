@@ -32,10 +32,9 @@ jobs:
           push: true
           tags: matymav/matyweb:latest
 
-      - name: Update image tag for container myweb in deploy.yaml
-        uses: loveholidays/gitops-action-yaml-updater@v1.0
+      - id: update-image
+        uses: Charlyzzz/update-k8s-image
         with:
-          mode: IMAGE_TAG
-          container-name: myweb
+          manifest-path: myweb/myweb-app/deploy.yaml
           new-image-tag: ${{ env.git_hash }}
-          valueFile: 'myweb-app/deploy.yaml'
+          name: myweb

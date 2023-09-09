@@ -37,4 +37,4 @@ jobs:
         with:
           manifest-path: myweb/myweb-app/deploy.yaml
           new-image-tag: ${{ env.git_hash }}
-          name: myweb
+          container-name: myweb

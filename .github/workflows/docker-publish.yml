@@ -35,6 +35,6 @@ jobs:
       - id: update-image
         uses: Charlyzzz/update-k8s-image@v1.7.1
         with:
-          manifest-path: myweb/deploy.yaml
+          manifest-path: .deploy.yaml
           new-image-tag: ${{ env.git_hash }}
           container-name: myweb

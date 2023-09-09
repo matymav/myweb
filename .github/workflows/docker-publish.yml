@@ -32,9 +32,4 @@ jobs:
           push: true
           tags: matymav/matyweb:latest
 
-      - id: update-image
-        uses: Charlyzzz/update-k8s-image@v1.7.1
-        with:
-          manifest-path: .deploy.yaml
-          new-image-tag: ${{ env.git_hash }}
-          container-name: myweb
+

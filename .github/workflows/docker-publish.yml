@@ -7,7 +7,7 @@ on:
     branches:
       - 'main'
 env:
-  git_hash: ${{ git rev-parse --short "$GITHUB_SHA" }}      
+  git_hash: ${{ github.sha }}    
 jobs:
   docker:
     runs-on: ubuntu-latest

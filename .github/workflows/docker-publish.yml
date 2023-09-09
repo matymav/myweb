@@ -31,3 +31,12 @@ jobs:
           context: https://github.com/matymav/myweb.git#main
           push: true
           tags: matymav/matyweb:latest
+
+      - name: Update image tag for container myweb in deploy.yaml
+        uses: loveholidays/gitops-action-yaml-updater@v1.0
+        with:
+          mode: IMAGE_TAG
+          container-name: myweb
+          new-image-tag: ${{ env.git_hash }}
+          dir: myweb-app/
+          files: deploy.yaml

@@ -30,4 +30,4 @@ jobs:
         with:
           context: https://github.com/matymav/myweb.git#main
           push: true
-          tags: matymav/matyweb:${{ env.git_hash }}
+          tags: matymav/matyweb:latest
